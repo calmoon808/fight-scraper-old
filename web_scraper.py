@@ -14,7 +14,8 @@ chrome_options.add_experimental_option("detach", True)
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 driver.get("https://auth.tdameritrade.com/auth?response_type=code&redirect_uri=https://discord-stock-moonbot.herokuapp.com/&client_id=C7XQAIY9SREZRXKWVTXMLWF9TMHB3ZP0%40AMER.OAUTHAP")
-print(driver.page_source)
+# print(driver.page_source)
+print(driver.current_url);
 wait = WebDriverWait(driver, 10)
 
 usernameInput = driver.find_element(By.ID, "username0");
