@@ -1,1 +1,1 @@
-web:python web_scraper.py
+web: python web_scraper.py
